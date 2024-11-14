@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo21DAPg11DWi-AVv3fgX2CQaa_g9HqiAPoQ&s");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #dbdbdb;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Styling icons (images) */
+.nav-icons .icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect on icons */
+.nav-icons .icon img:hover {
+    transform: scale(1.2);
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d3e4f4;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Navbar Icon Sizes */
+.nav-icons .icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-icons .icon img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+main {
+    padding-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.feed {
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.feed-post {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(54, 182, 158, 0.8), rgba(250, 103, 103, 0.6));
+    backdrop-filter: blur(10px);
+    overflow: visible; /* Allow content to overflow if necessary */
+    max-width: 100%; /* Prevents the post from exceeding screen width */
+    width: auto;
+    margin-bottom: 20px; /* Adds spacing between posts */
+}
+
+.feed-post .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+}
+
+.post-media {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.post-actions {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.post-caption {
+    font-size: 0.9rem;
+    color: #333;
+}
