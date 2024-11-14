@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Checkbox for toggling between forms -->
+        <input type="checkbox" id="toggle-form" style="display: none;">
+        
+        <div class="form-container">
+            <div class="form-inner">
+                <!-- Login Form -->
+                <form id="login-form" class="form" onsubmit="redirectToHome(event)">
+                    <h2>Login</h2>
+                    <div class="input-box">
+                        <input type="text" placeholder="Username" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <label for="toggle-form" class="toggle-label">Sign up</label></p>
+                </form>
+                
+                <!-- Signup Form -->
+                <form id="signup-form" class="form" onsubmit="redirectToHome(event)">
+                    <h2>Sign Up</h2>
+                    <div class="input-box">
+                        <input type="text" placeholder="Username" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <label for="toggle-form" class="toggle-label">Login</label></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to redirect to the homepage
+        function redirectToHome(event) {
+            event.preventDefault(); // Prevent default form submission
+            window.location.href = "home.html"; // Redirect to homepage (replace with actual URL)
+        }
+    </script>
+</body>
+</html>
