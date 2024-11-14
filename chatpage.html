@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone</title>
+    <link rel="stylesheet" href="chatstyles.css">
+</head>
+<body>
+    <!-- Chat Application Container -->
+    <div class="app-container">
+        <!-- Contact List -->
+        <div class="contact-list">
+            <h2>Contacts</h2>
+            <div class="contact" onclick="openChat('John')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4v2maizi5XrJp49NfWRdXmVxqXTmWZTQKUg&s" alt="John" class="avatar">
+                <div class="contact-info">
+                    <p class="contact-name">John</p>
+                    <p class="last-message">Hey, how are you?</p>
+                </div>
+            </div>
+            <div class="contact" onclick="openChat('Jane')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0DfT5DnS2TeGrCAoiV4cCF6ACLIzDCpe2DQ&s" alt="Jane" class="avatar">
+                <div class="contact-info">
+                    <p class="contact-name">Jane</p>
+                    <p class="last-message">Let's catch up soon!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Window -->
+        <div class="chat-window">
+            <div class="chat-header">
+                <h2 id="chat-name">Select a contact</h2>
+                <div class="chat-header-icons">
+                    <button onclick="openShare()">Share</button>
+                    <button onclick="openCamera()">Camera</button>
+                </div>
+            </div>
+            
+            <div class="chat-body" id="chat-body">
+                <p>Select a contact to start chatting!</p>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Type a message" onkeydown="if(event.key === 'Enter') sendMessage()" />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Camera Modal for capturing image -->
+    <div class="camera-modal" id="camera-modal">
+        <div class="camera-modal-content">
+            <button onclick="closeCamera()">Close</button>
+            <video id="video" width="100%" height="auto" autoplay></video>
+            <button onclick="captureImage()">Capture Image</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
