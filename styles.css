@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+   background-position: center center;
+    background-attachment: fixed;
+    
+        /* Base Styling */
+         background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgoRAM8VbTHTlFwB9v3BRa0ZlFUioRZH5lqQ&s"), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFN1DLsGqV2ksYiowWzR7imhzTcilrHghsTe9Eo2MfvXWsLd0bk7t1qK5Jne5LOsYPSzU&usqp=CAU");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-attachment: fixed; /* Ensures the background image remains fixed on scroll */
+         background-blend-mode: screen;
+}
+
+.container {
+    width: 300px;
+    position: relative;
+}
+
+.form-container {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#toggle-form {
+    display: none;
+}
+
+.form-inner {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease;
+}
+
+#toggle-form:checked ~ .form-container .form-inner {
+    transform: translateX(-50%);
+}
+
+.form {
+    width: 100%;
+    padding: 2rem;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.input-box {
+    margin-bottom: 1rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.toggle-label {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+}
